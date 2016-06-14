@@ -9,6 +9,7 @@ exports.handler = function(event, context) {
       start: event.start && parseInt(event.start),
       lang: event.lang && event.lang.toLowerCase(),
       country: event.country && event.country.toLowerCase(),
+      fullDetail: event.fullDetail,
   })
   .then(function(apps){
     context.done(null, apps)
